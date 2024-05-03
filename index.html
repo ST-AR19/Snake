@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="icon" href="favicon.ico" />
+    <audio id="bg-music" loop>
+        <source src="music/temp.mp3" type="audio/mpeg">
+    </audio>
+</head>
+
+<body>
+    <div class="content">
+        <div class="btn startBtn"><button></button></div>
+        <div class="btn pauseBtn"><button></button></div>
+        <div id="snakeWrap">
+        </div>
+    </div>
+    <div id="message" style="border:1px solid black;width: 300px;height: 700px;margin-top: 80px;margin-right:100px;float:right">
+    <div>buff1: <span id="buff1">false</span></div>
+    <div>buff2: <span id="buff2">false</span><div>
+    <button  onclick="javascript:location.reload();" type="button">重新开始</button>
+    <div></div><br/>
+    <div>当前玩家：<span id="name"></span></div><br/>
+    <div>得分：<span id="score">0</span></div><br/>
+    <div><button id="historyScore_button" onclick="toggleHistory()">历史记录</button>
+        <ul id="historyScore" style="display: none;">
+        </ul>
+    </div>
+    <div><button id="ranking_button" onclick="displayRanking()"> 排行榜</button>
+        <ul id="ranking">
+        </ul>
+    </div>
+    <div>
+        <button id="clearStorage" onclick="clearStorage()">清除记录</button>
+    </div>
+</div>
+    <script src="JS/index.js"></script>
+</body>
+
+</html>
